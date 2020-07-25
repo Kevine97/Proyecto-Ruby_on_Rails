@@ -1,7 +1,11 @@
+<div class="row justify-content-center ml-5 ">
+<div class="col-sm-12 col-xl-6 col-md-12">
+<div class="card">
+<div class="card-body show">
 <p id="notice"><%= notice %></p>
 
 <p>
-  <strong>Name:</strong>
+  <strong>Nombre:</strong>
   <%= @movie.name %>
 </p>
 <p>
@@ -9,14 +13,18 @@
   <%= @movie.cine.name %>
 </p>
 <p>
-  <strong>Duration:</strong>
+  <strong>Duracion:</strong>
   <%= @movie.duration %>
 </p>
 
 <p>
-  <strong>Date time movie:</strong>
+  <strong>Fecha de estreno:</strong>
   <%= @movie.date_time_movie %>
 </p>
 
-<%= link_to "Edit", edit_movie_path(@movie) %> |
-<%= link_to "Back", movies_path %>
+<%= link_to "Edit", edit_movie_path(@movie), class: "btn btn-dark " %> 
+<%= link_to "Back", movies_path, class: "btn btn-outline-dark ml-3" %>
+</div>
+</div>
+</div>
+</div>

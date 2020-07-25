@@ -1,12 +1,14 @@
+<div class="row justify-content-center ">
+<div class="col-sm-12 col-xl-6 col-md-12 col-12">
 <p id="notice"><%= notice %></p>
 
-<h1>Cines</h1>
+<h1 class="text-center mb-3">Sección de los cines </h1>
 
-<table>
-  <thead>
+<table class="table">
+  <thead class="thead-dark">
     <tr>
-      <th>Name</th>
-      <th>Phone</th>
+      <th>Nombre</th>
+      <th>Telefono</th>
       <th colspan="3"></th>
     </tr>
   </thead>
@@ -16,9 +18,9 @@
       <tr>
         <td><%= cine.name %></td>
         <td><%= cine.phone %></td>
-        <td><%= link_to 'Show', cine %></td>
-        <td><%= link_to 'Edit', edit_cine_path(cine) %></td>
-        <td><%= link_to 'Destroy', cine, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <td><%= link_to "Ver", cine, class: "btn btn-light far fa-eye" %></td>
+        <td><%= link_to "Editar", edit_cine_path(cine), class: "btn btn-light far fa-edit" %></td>
+        <td><%= link_to "Eliminar", cine, method: :delete, data: { confirm: "¿Esta seguro?" }, class: "btn btn-light far fa-trash-alt " %></td></td>
       </tr>
     <% end %>
   </tbody>
@@ -26,4 +28,6 @@
 
 <br>
 
-<%= link_to 'New Cine', new_cine_path %>
+<%= link_to "Agregar cine", new_cine_path, class: "btn btn-dark" %>
+</div>
+</div>

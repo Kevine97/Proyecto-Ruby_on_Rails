@@ -29,7 +29,7 @@ class CinesController < ApplicationController
 
     respond_to do |format|
       if @cine.save
-        format.html { redirect_to @cine, notice: "Cine was successfully created." }
+        format.html { redirect_to @cine, notice: "Cine fue creado con éxito." }
         format.json { render :show, status: :created, location: @cine }
       else
         format.html { render :new }
@@ -43,7 +43,7 @@ class CinesController < ApplicationController
   def update
     respond_to do |format|
       if @cine.update(cine_params)
-        format.html { redirect_to @cine, notice: "Cine was successfully updated." }
+        format.html { redirect_to @cine, notice: " Cine se actualizó con éxito." }
         format.json { render :show, status: :ok, location: @cine }
       else
         format.html { render :edit }
@@ -57,7 +57,7 @@ class CinesController < ApplicationController
   def destroy
     @cine.destroy
     respond_to do |format|
-      format.html { redirect_to cines_url, notice: "Cine was successfully destroyed." }
+      format.html { redirect_to cines_url, notice: " Cine fue eliminado con éxito." }
       format.json { head :no_content }
     end
   end

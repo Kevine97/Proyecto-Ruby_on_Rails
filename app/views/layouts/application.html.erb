@@ -7,7 +7,12 @@
 
     <%= stylesheet_link_tag "application", media: "all", 'data-turbolinks-track': "reload" %>
     <%= javascript_pack_tag "application", 'data-turbolinks-track': "reload" %>
-    
+   <link
+      rel="icon"
+      type="image/png"
+      sizes="35x35"
+      href="https://i.ibb.co/M8HZpKt/icons8-cinema-25px.png"
+    />
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
   <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
 <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
@@ -42,20 +47,59 @@
       <a class="nav-link" href="<%= destroy_user_session_path %>" data-method="delete"><%= current_user.email %></a>
      <% else %>
      <a class="nav-link" href="<%= new_user_session_path %>"> Iniciar sesión</a>
-     <% end %>
-     
+     <% end %>  
      </li>
      </ul>
-
- 
   </div>
 </nav>
-    <div class="container py-5">
+    <div class="container">
     <div>
     <p class="notice"><%= notice %></p>
       <p class="alert"><%= alert %></p>
     </div>
       <%= yield %>
    </div>
+   <footer class="bg-dark mt-5">
+<div class="container">
+<div class="row justify-content-center text-center text-light">
+    <div class="col-md-9">
+        
+        <p class="pt-3">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's</p>
+    </div>
+    <div class="col-md-4">
+        <hr class="bg-light">
+        <h5>Contacto</h5>
+        <hr class="bg-light">
+        <h5>2222-2222</h5>
+        <p>email@cinema.com</p>
+        <p>100 Managua</p>
+        <p>Nicaragua</p>
+    </div>
+    <div class="col-md-4">
+        <hr class="bg-light">
+        <h5>Horario</h5>
+        <hr class="bg-light">
+        <p>Monday: 9am - 5pm</p>
+        <p>Sabados: 11am - 5pm</p>
+        <p>Domingos: 12pm - 5pm</p>
+    </div>
+    <div class="col-md-4">
+        <hr class="bg-light">
+        <h5>Area Servicio</h5>
+        <hr class="bg-light">
+        <p>Managua, 000000</p>
+        <p>Chinandega, 000000</p>
+        <p>Esteli, 000000</p>
+        <p>Leon, 000000</p>
+        <p>Masaya, 000000</p>
+    </div>
+</div>
+</div>
+</footer>
+
+<div class="bg-dark socket text-light text-center py-4">
+    <p>&copy; <a href=""></a>Cinema Nicaragua</p>
+</div>
+
   </body>
 </html>

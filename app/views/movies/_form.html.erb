@@ -1,7 +1,7 @@
 <%= form_with(model: movie, local: true) do |form| %>
   <% if movie.errors.any? %>
     <div id="error_explanation">
-      <h2><%= pluralize(movie.errors.count, "error") %> prohibited this movie from being saved:</h2>
+      <h2><%= pluralize(movie.errors.count, "error") %> Prohibió que se guardara esta película</h2>
 
       <ul>
         <% movie.errors.full_messages.each do |message| %>
@@ -11,26 +11,26 @@
     </div>
   <% end %>
 
-  <div class="field">
+  <div class="form-group">
     <%= form.label :name %>
-    <%= form.text_field :name %>
+    <%= form.text_field :name, class: "form-control" %>
   </div>
 
-  <div class="field">
+  <div class="form-group">
     <%= form.label :duration %>
-    <%= form.time_select :duration %>
+    <%= form.time_select :duration, class: "form-control" %>
   </div>
 
-  <div>
+  <div class="form-group">
   <%= form.label :cine_id %>
-  <%= select("movie", "cine_id", @cine, { include_blank: true }) %>
+  <%= select("movie", "cine_id", @cine, { include_blank: true }, class: "form-control") %>
   </div>
-  <div class="field">
+  <div class="form-group">
     <%= form.label :date_time_movie %>
-    <%= form.datetime_select :date_time_movie %>
+    <%= form.datetime_select :date_time_movie, class: "form-control" %>
   </div>
 
   <div class="actions">
-    <%= form.submit %>
+    <%= form.submit "Guardar Pelicula", class: "btn btn-dark" %>
   </div>
 <% end %>
