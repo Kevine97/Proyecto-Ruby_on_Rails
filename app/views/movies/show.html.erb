@@ -1,0 +1,22 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Name:</strong>
+  <%= @movie.name %>
+</p>
+<p>
+  <strong>Cine:</strong>
+  <%= @movie.cine.name %>
+</p>
+<p>
+  <strong>Duration:</strong>
+  <%= @movie.duration %>
+</p>
+
+<p>
+  <strong>Date time movie:</strong>
+  <%= @movie.date_time_movie %>
+</p>
+
+<%= link_to "Edit", edit_movie_path(@movie) %> |
+<%= link_to "Back", movies_path %>
