@@ -71,6 +71,6 @@ class CinesController < ApplicationController
 
   # Only allow a list of trusted parameters through.
   def cine_params
-    params.require(:cine).permit(:name, :phone)
+    params.require(:cine).permit :name, :phone, :picture
   end
 end

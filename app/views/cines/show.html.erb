@@ -3,7 +3,8 @@
 <div class="card">
 <div class="card-body show">
 <p id="notice"><%= notice %></p>
-
+<%= image_tag @cine.picture.thumb.url, class: "figure-img img-fluid img-thumbnail rounded mb-3" %>
+<p>
 <p>
   <strong>Nombre:</strong>
   <%= @cine.name %>

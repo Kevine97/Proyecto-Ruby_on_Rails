@@ -15,7 +15,10 @@
     <%= form.label :name %>
     <%= form.text_field :name, class: "form-control" %>
   </div>
-
+ <div class="form-group">
+    <%= form.label :picture %>
+    <%= form.file_field :picture %>
+  </div>
   <div class="form-group">
     <%= form.label :duration %>
     <%= form.time_select :duration, class: "form-control" %>
@@ -27,7 +30,7 @@
   </div>
   <div class="form-group">
     <%= form.label :date_time_movie %>
-    <%= form.datetime_select :date_time_movie, class: "form-control" %>
+    <%= form.datetime_select :date_time_movie %>
   </div>
 
   <div class="actions">

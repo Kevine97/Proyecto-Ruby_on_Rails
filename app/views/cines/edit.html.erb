@@ -3,7 +3,7 @@
 <div class="card">
     <div class="card-body">
 <h1 class="card-header text-center mb-5" >Editar cine</h1>
-
+<%= image_tag @cine.picture.thumb.url, class: "figure-img img-fluid img-thumbnail rounded mb-3" %>
 <%= render "form", cine: @cine %>
 
 <%= link_to "Show", @cine, class: "btn btn-outline-dark float-right" %> 

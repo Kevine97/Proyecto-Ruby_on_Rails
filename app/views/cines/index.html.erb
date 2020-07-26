@@ -9,6 +9,7 @@
     <tr>
       <th>Nombre</th>
       <th>Telefono</th>
+      <th>Portada</th>
       <th colspan="3"></th>
     </tr>
   </thead>
@@ -18,6 +19,7 @@
       <tr>
         <td><%= cine.name %></td>
         <td><%= cine.phone %></td>
+        <td><%= image_tag cine.picture.thumb.url, class: "figure-img img-fluid img-thumbnail rounded" %></td>
         <td><%= link_to "Ver", cine, class: "btn btn-light far fa-eye" %></td>
         <td><%= link_to "Editar", edit_cine_path(cine), class: "btn btn-light far fa-edit" %></td>
         <td><%= link_to "Eliminar", cine, method: :delete, data: { confirm: "¿Esta seguro?" }, class: "btn btn-light far fa-trash-alt " %></td></td>
