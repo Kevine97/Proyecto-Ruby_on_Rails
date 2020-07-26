@@ -5,8 +5,10 @@
     <h1 class="card-header text-center mb-3">Editar Pelicula</h1>
 <%= image_tag @movie.picture.thumb.url, class: " img-thumbnail rounded mb-3" %>
 <%= render "form", movie: @movie %>
-<%= link_to "Show", @movie, class: "btn btn-outline-dark float-right" %> 
-<%= link_to "Back", movies_path, class: "btn btn-outline-dark mr-2 float-right" %>
+<div class="col text-center">
+<%= link_to "Show", @movie, class: "btn btn-outline-dark mt-3 " %> 
+<%= link_to "Back", movies_path, class: "btn btn-outline-dark mr-2 mt-3" %>
+</div>
 </div>
 </div>
 </div>

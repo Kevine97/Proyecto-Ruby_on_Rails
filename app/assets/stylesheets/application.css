@@ -91,8 +91,9 @@ footer a:hover,
   
 }
 
-.btn-primary{
+.btn-dark{
   color: #fff;
+  
 }
 
 .far {
@@ -132,4 +133,9 @@ font-size: 12pt;
 .fa-instagram:hover,
 .fa-youtube:hover{
   color: #d5d5d5;
+}
+
+.btn-centro{
+  font-size: 12pt !important;
+  width: 300px !important;
 }
