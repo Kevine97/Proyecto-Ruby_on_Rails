@@ -28,7 +28,7 @@
   <div class="collapse navbar-collapse" id="navbarNavDropdown">
     <ul class="navbar-nav mr-auto ml-5">
       <li class="nav-item">
-        <a class="nav-link" href="<%= home_index_path %>">Home</a>
+        <a class="nav-link" href="<%= home_index_path %>">CARTELERA</a>
       </li>
       <li class="nav-item dropdown">
         <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
@@ -52,6 +52,34 @@
      </ul>
   </div>
 </nav>
+  <div
+    id="carousel"
+    class="carousel slide"
+    data-ride="carousel"
+    data-interval="6500"
+  >
+    <div class="carousel-inner">
+      <div class="carousel-item active">
+        <%= image_tag("https://images.pexels.com/photos/436413/pexels-photo-436413.jpeg", :alt => "rss feed", :class => "w-100") %>
+        <div class="carousel-caption">
+        </div>
+      </div>
+
+      <div class="carousel-item">
+         <%= image_tag("https://images.pexels.com/photos/4061506/pexels-photo-4061506.jpeg", :alt => "rss feed", :class => "w-100") %>
+      </div>
+
+      <div class="carousel-item">
+         <%= image_tag("https://images.pexels.com/photos/33129/popcorn-movie-party-entertainment.jpg", :alt => "rss feed", :class => "w-100") %>
+      </div>
+    </div>
+
+    <ol class="carousel-indicators">
+      <li data-target="#carousel" data-slide-to="0" class="active"></li>
+      <li data-target="#carousel" data-slide-to="1"></li>
+      <li data-target="#carousel" data-slide-to="2"></li>
+    </ol>
+  </div>
 
     <div class="container">
     <div>
