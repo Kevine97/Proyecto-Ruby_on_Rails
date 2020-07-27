@@ -15,13 +15,18 @@
 </p>
 <p>
   <strong>Duracion:</strong>
-  <%= @movie.duration %>
+  <%= @movie.duration.strftime("%H:%M") %>
 </p>
 
 <p>
   <strong>Fecha de estreno:</strong>
-  <%= @movie.date_time_movie %>
+  <%= @movie.date_time_movie.strftime("%F") %>
 </p>
+<p>
+  <strong>Hora:</strong>
+  <%= @movie.date_time_movie.strftime("%H:%M") %>
+</p>
+
 
 <%= link_to "Edit", edit_movie_path(@movie), class: "btn btn-dark " %> 
 <%= link_to "Back", movies_path, class: "btn btn-outline-dark ml-3" %>
