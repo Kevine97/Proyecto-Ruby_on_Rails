@@ -20,8 +20,8 @@
     <% @movies.each do |movie| %>
       <tr>
         <td><%= movie.name %></td>
-        <td><%= movie.duration %></td>
-        <td><%= movie.date_time_movie %></td>
+        <td><%= movie.duration.strftime("%H:%M") %></td>
+        <td><%= movie.date_time_movie.strftime("%F  Hora: %H:%M") %></td>
         <td><%= image_tag movie.picture.thumb.url, class: "figure-img img-fluid img-thumbnail rounded" %></td>
        <td><%= movie.cine.name %></td>
         <td><%= link_to "Ver", movie, class: " btn btn-light far fa-eye " %></td>

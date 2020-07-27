@@ -12,8 +12,9 @@
           <%= image_tag movie.picture.thumb.url, class: "figure-img img-fluid img-thumbnail rounded" %>
           <div class="card-body">
             <h4 class="card-title"><%= movie.name %></h4>
-            <p class="card-text"><strong>Estreno: <%= movie.date_time_movie %></strong> </p>
-            <p class="card-p card-text">Duracion: <%= movie.duration %></p>
+            <p class="card-text"><strong>Estreno: <%= movie.date_time_movie.strftime("%F") %></strong> </p>
+            <p class="card-text"><strong>Hora: <%= movie.date_time_movie.strftime("%H:%M") %></strong> </p>
+            <p class="card-p card-text">Duracion: <%= movie.duration.strftime("%H:%M") %></p>
             <p class="card-cine card-text">Cine: <%= movie.cine.name %></p>  
           </div>
         </div>
